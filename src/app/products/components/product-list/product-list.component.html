@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th *ngFor="let column of columns">{{column}}</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>{{product.name}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.category}}</td>
+    <td>{{product.isAvailable ? 'Available' : 'Not available'}}</td>
+  </tr>
+</table>
