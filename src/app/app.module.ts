@@ -5,6 +5,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {ProductModule} from './product/product.module';
 import {CartModule} from './cart/cart.module';
+import {OrderModule} from './order/order.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {CartModule} from './cart/cart.module';
     MatCheckboxModule,
     MatTableModule,
     ProductModule,
-    CartModule
+    CartModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

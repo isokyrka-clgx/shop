@@ -12,6 +12,7 @@ Task 2
 ###Added
 * Product module
 * Cart module
+* Order module
 
 ###Changed
 * Product model
