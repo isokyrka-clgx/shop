@@ -3,25 +3,23 @@ import {MatButtonModule, MatCheckboxModule, MatTableModule} from '@angular/mater
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {ProductComponent} from './products/components/product/product.component';
-import {ProductListComponent} from './products/components/product-list/product-list.component';
-import {CartComponent} from './cart/components/cart.component';
+import {ProductModule} from './product/product.module';
+import {CartModule} from './cart/cart.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductComponent,
-    ProductListComponent,
-    CartComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatTableModule
+    MatTableModule,
+    ProductModule,
+    CartModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }

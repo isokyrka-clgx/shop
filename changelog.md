@@ -1,7 +1,19 @@
+Task 1
 ----------------------------------
-* Created product component
-* Created product model
-* Created product service
-* Created cart component
-* Created cart service
+###Added
+* Product component
+* Product model
+* Product service
+* Cart component
+* Cart service
+
+Task 2
 ----------------------------------
+###Added
+* Product module
+* Cart module
+
+###Changed
+* Product model
+
+
