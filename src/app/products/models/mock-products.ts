@@ -1,4 +1,4 @@
-import {ProductModel} from './product';
+import {ProductModel} from './product.model';
 import {Category} from './category.enum';
 
 export const MockProducts: ProductModel[] = [

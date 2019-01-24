@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ProductModel} from '../../models/product';
+import {ProductModel} from '../../models/product.model';
 import {MatTableDataSource} from '@angular/material';
 import {SelectionModel} from '@angular/cdk/collections';
 import {ProductService} from '../../services/product.service';
