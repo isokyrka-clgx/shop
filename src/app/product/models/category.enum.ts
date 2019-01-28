@@ -1,5 +1,5 @@
 export enum Category {
-  NEW,
-  SALE,
-  EOL
+  NEW = 'New',
+  SALE = 'Sale',
+  EOL = 'EOL'
 }

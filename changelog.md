@@ -16,5 +16,7 @@ Task 2
 
 ###Changed
 * Product model
+* Category enum
+* Product component
 
 

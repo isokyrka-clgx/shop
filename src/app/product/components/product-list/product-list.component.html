@@ -1,12 +1,10 @@
-<table>
-  <tr>
-    <th *ngFor="let column of columns">{{column}}</th>
-  </tr>
-  <tr *ngFor="let product of products">
-    <td>{{product.name}}</td>
-    <td>{{product.description}}</td>
-    <td>{{product.price}}</td>
-    <td>{{product.category}}</td>
-    <td>{{product.isAvailable ? 'Available' : 'Not available'}}</td>
-  </tr>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let product of products">
+      <app-product-component [product]="product">
+      </app-product-component>
+      <button class="btn btn-primary" (click)="onClick(product)" [disabled]="!product.isAvailable">Buy
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,5 @@
-import {Component} from '@angular/core';
-import {ProductModel} from '../../models/product.model';
-import {MatTableDataSource} from '@angular/material';
-import {SelectionModel} from '@angular/cdk/collections';
-import {ProductService} from '../../services/product.service';
+import { Component, Input } from '@angular/core';
+import { ProductModel } from '../../models/product.model';
 
 @Component({
   selector: 'app-product-component',
@@ -11,26 +8,7 @@ import {ProductService} from '../../services/product.service';
 })
 export class ProductComponent {
 
-  constructor(private productService: ProductService) {
-  }
+  @Input()
+  product: ProductModel;
 
-  displayedColumns: string[] = ['select', 'name', 'description', 'price', 'isAvailable'];
-  dataSource = new MatTableDataSource<ProductModel>(this.productService.getProducts());
-  selection = new SelectionModel<ProductModel>(true, []);
-
-  isAllSelected() {
-    const numSelected = this.selection.selected.length;
-    const numRows = this.dataSource.data.length;
-    return numSelected === numRows;
-  }
-
-  masterToggle() {
-    this.isAllSelected() ?
-      this.selection.clear() :
-      this.dataSource.data.forEach(row => this.selection.select(row));
-  }
-
-  onBuyButtonClick() {
-    console.log(this.selection.selected);
-  }
 }
