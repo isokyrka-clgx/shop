@@ -20,13 +20,22 @@ export class OrderService {
     var value = this.orderedProducts.find(p => p.id == product.id);
     if (!value) {
       this.orderedProducts.push(product);
-      console.log(product.id);
     }
   }
 
   removeProduct(product: ProductModel) {
     var index = this.orderedProducts.indexOf(product);
     this.orderedProducts.splice(index, 1);
+  }
+
+  getQuantity() {
+    return this.orderedProducts.length;
+  }
+
+  getTotalPrice() {
+    const result = 0;
+    this.orderedProducts.forEach(p => result + p.price);
+    return result;
   }
 
 }

@@ -1,9 +1,11 @@
-<p>Ordered: <span class="badge badge-light">{{orderedProducts.length}}</span></p>
+<p #orderedP [ngStyle]="{'font-size':'14px', 'font-family':'Segoe Print'}" (wheel)="onWheel($event)">
+  Ordered: <span class="badge badge-light">{{orderedProducts.length}}</span>
+</p>
 
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let product of orderedProducts">
-    <app-cart [product]="product"></app-cart>
+    <app-cart [product]="product" (delete)="onDelete($event)"></app-cart>
   </li>
 </ul>
 
-<p>Total price: </p>
+<p [ngStyle]="{'font-size':'14px', 'font-family':'Segoe Print'}">Total price: {{totalPrice | currency}}</p>

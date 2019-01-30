@@ -3,8 +3,11 @@
         <div appHighlight highlightColor="red" class="col">{{product.id}}</div>
         <div appHighlight highlightColor="yellow" class="col">{{product.name}}</div>
         <div appHighlight highlightColor="green" class="col">{{product.price | currency}}</div>
+        <div>
+            <input type="number" [(ngModel)]="quantity"/>
+        </div>
         <div class="col">
-            <button class="btn btn-primary">Delete
+            <button class="btn btn-primary" (click)="onDelete(product)">Delete
             </button>
         </div>
     </div>
