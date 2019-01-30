@@ -10,4 +10,8 @@ export class ProductService {
   getProducts(): ProductModel[] {
     return MockProducts;
   }
+
+  getProductById(id: number) {
+    return MockProducts.find(p => p.id == id);
+  }
 }

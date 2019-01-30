@@ -3,7 +3,7 @@
     <div class="col" *ngFor="let product of products">
       <app-product-component [product]="product">
       </app-product-component>
-      <button class="btn btn-primary" (click)="onClick(product)" [disabled]="!product.isAvailable">Buy
+      <button class="btn btn-primary" (click)="onBuyClick(product)" [disabled]="!product.isAvailable">Buy
       </button>
     </div>
   </div>

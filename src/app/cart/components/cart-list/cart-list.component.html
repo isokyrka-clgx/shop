@@ -1,0 +1,7 @@
+<p>Ordered: <span class="badge badge-light">{{orderedProducts.length}}</span></p>
+<div *ngIf="orderedProducts.length > 0" class="content">
+  <div *ngFor="let product of orderedProducts">
+    <app-cart [product]="product"></app-cart>
+  </div>
+</div>
+<p>Total price: </p>
