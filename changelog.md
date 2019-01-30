@@ -13,6 +13,8 @@ Task 2
 * Product module
 * Cart module
 * Order module
+* Shared module
+* Highlight directive
 
 ###Changed
 * Product model

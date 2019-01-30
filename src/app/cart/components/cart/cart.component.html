@@ -1,1 +1,11 @@
-<h1>{{product.name}}</h1>
+<div class="container">
+    <div class="row">
+        <div appHighlight highlightColor="red" class="col">{{product.id}}</div>
+        <div appHighlight highlightColor="yellow" class="col">{{product.name}}</div>
+        <div appHighlight highlightColor="green" class="col">{{product.price | currency}}</div>
+        <div class="col">
+            <button class="btn btn-primary">Delete
+            </button>
+        </div>
+    </div>
+</div>
