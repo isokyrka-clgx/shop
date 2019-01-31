@@ -1,5 +1,5 @@
 <p #orderedP [ngStyle]="{'font-size':'14px', 'font-family':'Segoe Print'}" (wheel)="onWheel($event)">
-  Ordered: <span class="badge badge-light">{{orderedProducts.length}}</span>
+  Ordered: <span class="badge badge-light">{{getOrdersQuanity()}}</span>
 </p>
 
 <ul class="list-group">
@@ -8,4 +8,4 @@
   </li>
 </ul>
 
-<p [ngStyle]="{'font-size':'14px', 'font-family':'Segoe Print'}">Total price: {{totalPrice | currency}}</p>
+<p [ngStyle]="{'font-size':'14px', 'font-family':'Segoe Print'}">Total price: {{getTotalPrice() | currency}}</p>

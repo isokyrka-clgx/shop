@@ -6,10 +6,10 @@ import { ProductModel } from 'src/app/product/models/product.model';
 })
 export class OrderService {
 
-  private orderedProducts: Array<ProductModel>
+  private orderedProducts: ProductModel[];
 
   constructor() {
-    this.orderedProducts = new Array;
+    this.orderedProducts = [];
   }
 
   getSelectedProducts() {
@@ -17,7 +17,7 @@ export class OrderService {
   }
 
   addProduct(product: ProductModel) {
-    var value = this.orderedProducts.find(p => p.id == product.id);
+    var value = this.orderedProducts.find(p => p.id === product.id);
     if (!value) {
       this.orderedProducts.push(product);
     }
@@ -32,10 +32,11 @@ export class OrderService {
     return this.orderedProducts.length;
   }
 
-  getTotalPrice() {
-    const result = 0;
-    this.orderedProducts.forEach(p => result + p.price);
-    return result;
+  getTotalPrice(): number {
+     return this.orderedProducts.reduce(
+       (acc, p) => acc += p.price, 
+       0
+    );
   }
 
 }

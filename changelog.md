@@ -20,5 +20,6 @@ Task 2
 * Product model
 * Category enum
 * Product component
+* Cart component
 
 

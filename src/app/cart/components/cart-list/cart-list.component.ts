@@ -12,8 +12,6 @@ export class CartListComponent {
   @ViewChild('orderedP')
   orderedP: ElementRef;
 
-  totalPrice: number;
-  quantity: number;
   orderedProducts: Array<ProductModel>;
 
   constructor(
@@ -21,13 +19,10 @@ export class CartListComponent {
     private renderer: Renderer2
   ) {
     this.orderedProducts = orderService.getSelectedProducts();
-    this.quantity = this.orderedProducts.length;
-    this.totalPrice = orderService.getTotalPrice();
   }
 
   onDelete(product: ProductModel) {
     this.orderService.removeProduct(product);
-    this.totalPrice = this.orderService.getTotalPrice();
   }
 
   onWheel(event: any) {
@@ -38,4 +33,11 @@ export class CartListComponent {
     }
   }
 
+  getOrdersQuanity(): number {
+    return this.orderService.getQuantity();
+  }
+
+  getTotalPrice(): number {
+    return this.orderService.getTotalPrice();
+  }
 }

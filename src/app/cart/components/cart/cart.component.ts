@@ -15,9 +15,14 @@ export class CartComponent {
   quantity: number = 1;
 
   @Output() delete = new EventEmitter<ProductModel>();
+  @Output() changeQuntity = new EventEmitter<number>();
 
   onDelete(product: ProductModel) {
     this.delete.emit(product);
+  }
+
+  onChange() {
+    console.log(this.quantity);
   }
 
 }
