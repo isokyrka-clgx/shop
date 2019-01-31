@@ -15,11 +15,14 @@ Task 2
 * Order module
 * Shared module
 * Highlight directive
+* Cart DTO 
 
 ###Changed
 * Product model
 * Category enum
 * Product component
 * Cart component
+* Cart-list component
+* Order service
 
 

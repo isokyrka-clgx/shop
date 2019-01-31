@@ -3,8 +3,8 @@
 </p>
 
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let product of orderedProducts">
-    <app-cart [product]="product" (delete)="onDelete($event)"></app-cart>
+  <li class="list-group-item" *ngFor="let product of getOrderedProducts()">
+    <app-cart [product]="product" (delete)="onDelete($event)" (changeQuntity)="onChangeQuantity($event)"></app-cart>
   </li>
 </ul>
 

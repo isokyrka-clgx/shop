@@ -1,42 +1,42 @@
 import { Injectable } from '@angular/core';
 import { ProductModel } from 'src/app/product/models/product.model';
+import { CartDTOModel } from 'src/app/cart/models/cart-dto.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrderService {
 
-  private orderedProducts: ProductModel[];
+  private orderedProducts: Map<ProductModel, number>;
 
   constructor() {
-    this.orderedProducts = [];
+    this.orderedProducts = new Map;
   }
 
   getSelectedProducts() {
-    return this.orderedProducts;
+    return Array.from(this.orderedProducts.keys());
   }
 
   addProduct(product: ProductModel) {
-    var value = this.orderedProducts.find(p => p.id === product.id);
-    if (!value) {
-      this.orderedProducts.push(product);
-    }
+    this.orderedProducts.set(product, 1);
+  }
+
+  updateQuantity(cartDTO: CartDTOModel) {
+    this.orderedProducts.set(cartDTO.product, cartDTO.quantity);
   }
 
   removeProduct(product: ProductModel) {
-    var index = this.orderedProducts.indexOf(product);
-    this.orderedProducts.splice(index, 1);
+    this.orderedProducts.delete(product);
   }
 
   getQuantity() {
-    return this.orderedProducts.length;
+    return this.orderedProducts.size;
   }
 
   getTotalPrice(): number {
-     return this.orderedProducts.reduce(
-       (acc, p) => acc += p.price, 
-       0
-    );
+    let result = 0;
+    this.orderedProducts.forEach((value, key) => result += key.price * value);
+    return result;
   }
 
 }

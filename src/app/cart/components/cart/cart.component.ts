@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ProductComponent } from 'src/app/product/components/product/product.component';
 import { ProductModel } from 'src/app/product/models/product.model';
+import { CartDTOModel } from '../../models/cart-dto.model';
 
 @Component({
   selector: 'app-cart',
@@ -15,14 +16,14 @@ export class CartComponent {
   quantity: number = 1;
 
   @Output() delete = new EventEmitter<ProductModel>();
-  @Output() changeQuntity = new EventEmitter<number>();
+  @Output() changeQuntity = new EventEmitter<CartDTOModel>();
 
   onDelete(product: ProductModel) {
     this.delete.emit(product);
   }
 
   onChange() {
-    console.log(this.quantity);
+    this.changeQuntity.emit(new CartDTOModel(this.product, this.quantity));
   }
 
 }
