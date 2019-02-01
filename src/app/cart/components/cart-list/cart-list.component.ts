@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-import { OrderService } from 'src/app/order/services/order.service';
+import { OrderService } from 'src/app/shared/services/order.service';
 import { ProductModel } from 'src/app/product/models/product.model';
 import { CartDTOModel } from '../../models/cart-dto.model';
 
@@ -24,7 +24,7 @@ export class CartListComponent {
   }
 
   onChangeQuantity(cartDTO: CartDTOModel) {
-      this.orderService.updateQuantity(cartDTO);
+    this.orderService.updateQuantity(cartDTO);
   }
 
   onWheel(event: any) {
