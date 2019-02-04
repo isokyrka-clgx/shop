@@ -1,10 +1,10 @@
-<p #orderedP [ngStyle]="{'font-size':'14px', 'font-family':'Segoe Print'}" (wheel)="onWheel($event)">
+<p appWheel [ngStyle]="{'font-size':'14px', 'font-family':'Segoe Print'}">
   Ordered: <span class="badge badge-light">{{getOrdersQuanity()}}</span>
 </p>
 
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let product of getOrderedProducts()">
-    <app-cart [product]="product" (delete)="onDelete($event)" (changeQuntity)="onChangeQuantity($event)"></app-cart>
+    <app-cart [product]="product" (delete)="onDelete($event)" (changeQuantity)="onChangeQuantity($event)"></app-cart>
   </li>
 </ul>
 

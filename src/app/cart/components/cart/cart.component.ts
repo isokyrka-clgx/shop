@@ -16,14 +16,14 @@ export class CartComponent {
   quantity: number = 1;
 
   @Output() delete = new EventEmitter<ProductModel>();
-  @Output() changeQuntity = new EventEmitter<CartDTOModel>();
+  @Output() changeQuantity = new EventEmitter<CartDTOModel>();
 
   onDelete(product: ProductModel) {
     this.delete.emit(product);
   }
 
   onChange() {
-    this.changeQuntity.emit(new CartDTOModel(this.product, this.quantity));
+    this.changeQuantity.emit(new CartDTOModel(this.product, this.quantity));
   }
 
 }

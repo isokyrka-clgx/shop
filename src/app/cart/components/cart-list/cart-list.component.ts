@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { OrderService } from 'src/app/shared/services/order.service';
 import { ProductModel } from 'src/app/product/models/product.model';
 import { CartDTOModel } from '../../models/cart-dto.model';
@@ -9,9 +9,6 @@ import { CartDTOModel } from '../../models/cart-dto.model';
   styleUrls: ['./cart-list.component.css']
 })
 export class CartListComponent {
-
-  @ViewChild('orderedP')
-  orderedP: ElementRef;
 
   constructor(
     private orderService: OrderService,
@@ -25,14 +22,6 @@ export class CartListComponent {
 
   onChangeQuantity(cartDTO: CartDTOModel) {
     this.orderService.updateQuantity(cartDTO);
-  }
-
-  onWheel(event: any) {
-    if ((<WheelEvent>event).deltaY > 0) {
-      this.renderer.setStyle(this.orderedP.nativeElement, "font-size", "20px");
-    } else {
-      this.renderer.setStyle(this.orderedP.nativeElement, "font-size", "15px");
-    }
   }
 
   getOrderedProducts(): ProductModel[] {
