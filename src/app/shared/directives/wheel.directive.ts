@@ -16,9 +16,9 @@ export class WheelDirective {
 
   onWheel(event: any) {
     if ((<WheelEvent>event).deltaY > 0) {
-      this.renderer.setStyle(this.element.nativeElement, "font-size", "20px");
+      this.renderer.setStyle(this.element.nativeElement, 'font-size', '20px');
     } else {
-      this.renderer.setStyle(this.element.nativeElement, "font-size", "15px");
+      this.renderer.setStyle(this.element.nativeElement, 'font-size', '15px');
     }
   }
 

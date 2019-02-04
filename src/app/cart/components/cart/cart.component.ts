@@ -13,7 +13,7 @@ export class CartComponent {
   @Input()
   product: ProductModel;
 
-  quantity: number = 1;
+  quantity = 1;
 
   @Output() delete = new EventEmitter<ProductModel>();
   @Output() changeQuantity = new EventEmitter<CartDTOModel>();

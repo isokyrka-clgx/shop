@@ -12,6 +12,6 @@ export class ProductService {
   }
 
   getProductById(id: number) {
-    return MockProducts.find(p => p.id == id);
+    return MockProducts.find(p => p.id === id);
   }
 }
