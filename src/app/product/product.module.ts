@@ -14,7 +14,6 @@ import { SharedModule } from '../shared/shared.module';
     ProductListComponent
   ],
   exports: [
-    ProductComponent,
     ProductListComponent
   ]
 })
