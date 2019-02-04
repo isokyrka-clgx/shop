@@ -4,7 +4,7 @@
         <div appHighlight highlightColor="yellow" class="col">{{product.name}}</div>
         <div appHighlight highlightColor="green" class="col">{{product.price | currency}}</div>
         <div>
-            <input [(ngModel)]="quantity" (change)="onChange()" type="number" />
+            <input [(ngModel)]="quantity" (change)="onChange()" min="1" type="number" />
         </div>
         <div class="col">
             <button class="btn btn-primary" (click)="onDelete(product)">Delete
