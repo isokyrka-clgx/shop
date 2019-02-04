@@ -30,3 +30,4 @@ Task 3
 ###Added
 * Order service
 * Local storage service
+* Config options service
