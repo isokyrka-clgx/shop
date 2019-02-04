@@ -31,3 +31,6 @@ Task 3
 * Order service
 * Local storage service
 * Config options service
+* Constants service 
+* Generator service
+* Change size directive

@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HighlightDirective } from './directives/highlight.directive';
 import { WheelDirective } from './directives/wheel.directive';
+import { ChangeSizeDirective } from './directives/change-size.directive';
 
 @NgModule({
   declarations: [
     HighlightDirective,
-    WheelDirective
+    WheelDirective,
+    ChangeSizeDirective
   ],
   imports: [
     CommonModule
