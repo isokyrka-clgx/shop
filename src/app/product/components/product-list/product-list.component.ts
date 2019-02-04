@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { ProductModel } from '../../models/product.model';
-import { OrderService } from 'src/app/shared/services/order.service';
+import { CartService } from 'src/app/cart/services/order.service';
 
 @Component({
   selector: 'app-product-list',
@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private orderService: OrderService
+    private orderService: CartService
   ) {
   }
 

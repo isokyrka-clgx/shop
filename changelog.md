@@ -25,4 +25,7 @@ Task 2
 * Cart-list component
 * Order service
 
-
+Task 3
+----------------------------------
+###Added
+* Order service

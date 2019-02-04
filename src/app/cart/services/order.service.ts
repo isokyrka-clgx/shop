@@ -5,7 +5,7 @@ import { CartDTOModel } from 'src/app/cart/models/cart-dto.model';
 @Injectable({
   providedIn: 'root'
 })
-export class OrderService {
+export class CartService {
 
   private orderedProducts: Map<ProductModel, number>;
 
@@ -27,6 +27,10 @@ export class OrderService {
 
   removeProduct(product: ProductModel) {
     this.orderedProducts.delete(product);
+  }
+
+  removeAllProducts() {
+    this.orderedProducts.clear();
   }
 
   getQuantity() {

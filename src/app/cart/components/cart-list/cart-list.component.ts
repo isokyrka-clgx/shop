@@ -1,5 +1,5 @@
 import { Component, Renderer2 } from '@angular/core';
-import { OrderService } from 'src/app/shared/services/order.service';
+import { CartService } from 'src/app/cart/services/order.service';
 import { ProductModel } from 'src/app/product/models/product.model';
 import { CartDTOModel } from '../../models/cart-dto.model';
 
@@ -11,7 +11,7 @@ import { CartDTOModel } from '../../models/cart-dto.model';
 export class CartListComponent {
 
   constructor(
-    private orderService: OrderService,
+    private orderService: CartService,
     private renderer: Renderer2
   ) {
   }
