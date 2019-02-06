@@ -35,3 +35,8 @@ Task 3
 * Generator service
 * Change size directive
 * Contact-us component
+
+Task 4
+----------------------------------
+* Added currency pipe to cart component
+* Added uppercase pipe to product component
