@@ -38,5 +38,9 @@ Task 3
 
 Task 4
 ----------------------------------
+###Added
 * Added currency pipe to cart component
 * Added uppercase pipe to product component
+
+###Changed
+* Product service returns promise

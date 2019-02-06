@@ -11,7 +11,7 @@ import { ConfigOptionsService } from 'src/app/shared/services/config-options.ser
 })
 export class ProductListComponent implements OnInit {
 
-  products: ProductModel[];
+  products: Promise<ProductModel[]>;
 
   constructor(
     private productService: ProductService,

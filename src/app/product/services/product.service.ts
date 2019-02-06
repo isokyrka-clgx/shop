@@ -7,8 +7,13 @@ import { MockProducts } from '../models/mock-products';
 })
 export class ProductService {
 
-  getProducts(): ProductModel[] {
-    return MockProducts;
+  getProducts(): Promise<ProductModel[]> {
+
+    return <Promise<ProductModel[]>>new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(MockProducts);
+      }, 1000);
+    }).catch(error => error);
   }
 
   getProductById(id: number) {
