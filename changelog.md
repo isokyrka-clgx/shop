@@ -34,3 +34,4 @@ Task 3
 * Constants service 
 * Generator service
 * Change size directive
+* Contact-us component

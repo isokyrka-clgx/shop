@@ -4,11 +4,12 @@ import { AppComponent } from './app.component';
 import { ProductModule } from './product/product.module';
 import { CartModule } from './cart/cart.module';
 import { SharedModule } from './shared/shared.module';
+import { ContactUsComponent } from './contact-us/components/contact-us/contact-us.component';
 
 const ConstantsService = new InjectionToken<any>('constantService');
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContactUsComponent],
   imports: [
     BrowserModule,
     ProductModule,
