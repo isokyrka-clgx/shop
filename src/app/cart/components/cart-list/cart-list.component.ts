@@ -2,6 +2,7 @@ import { Component, Renderer2 } from '@angular/core';
 import { CartService } from 'src/app/cart/services/order.service';
 import { ProductModel } from 'src/app/product/models/product.model';
 import { CartDTOModel } from '../../models/cart-dto.model';
+import { OrderByPipe } from 'src/app/shared/pipes/order-by.pipe';
 
 @Component({
   selector: 'app-cart-list',

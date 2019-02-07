@@ -41,6 +41,7 @@ Task 4
 ###Added
 * Added currency pipe to cart component
 * Added uppercase pipe to product component
+* Added Order By pipe to cart-list component
 
 ###Changed
 * Product service returns promise

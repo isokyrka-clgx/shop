@@ -1,5 +1,4 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { ProductComponent } from 'src/app/product/components/product/product.component';
 import { ProductModel } from 'src/app/product/models/product.model';
 import { CartDTOModel } from '../../models/cart-dto.model';
 
