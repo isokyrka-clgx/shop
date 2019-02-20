@@ -1,7 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1 #appTitle></h1>
+  <div style="text-align:left">
+      <ul>
+        <li routerLinkActive="active">
+          <a routerLink="/products-list">Product list</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/cart">Ordered products</a>
+        </li>
+      </ul>
+    </div>
+  <router-outlet>
+  </router-outlet>
 </div>
-
-<app-cart-list></app-cart-list>
-<app-product-list></app-product-list>
