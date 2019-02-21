@@ -3,7 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductListComponent } from './product/components/product-list/product-list.component';
 import { CartListComponent } from './cart/components/cart-list/cart-list.component';
 import { PageNotFoundComponent } from './page-not-found/components/page-not-found/page-not-found.component';
+
+import { AuthGuard } from './core';
+
 const routes: Routes = [
+    {
+        path: 'admin',
+        canLoad: [AuthGuard],
+        loadChildren: './admin/admin.module#AdminModule',
+        data: { title: 'Admin' }
+    },
     {
         path: 'products-list',
         component: ProductListComponent
@@ -18,8 +27,6 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        // The router will match this route if the URL requested
-        // doesn't match any paths for routes defined in our configuration
         path: '**',
         component: PageNotFoundComponent
     }
