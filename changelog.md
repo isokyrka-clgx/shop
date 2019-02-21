@@ -45,3 +45,9 @@ Task 4
 
 ###Changed
 * Product service returns promise
+
+Task 4
+----------------------------------
+###Added
+* Admin component
+* Routing

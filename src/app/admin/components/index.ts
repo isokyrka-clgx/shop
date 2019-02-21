@@ -1,0 +1,1 @@
+export * from '../components/manage-products/manage-products.component'
